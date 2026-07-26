@@ -13,6 +13,12 @@ is the Brier score for a fixed value of $z$. CRPS integrates over all choices of
 
 ### Intuition
 
-CRPS is the integral of the squared distance between the predicted cumulative density function (CDF) and the empirical CDF of a single observation, $y$. If $y$ is known, it is minimised by a point estimate at $y$. CRPS rewards sharp, calibrated predictions. 
+CRPS is the integral of the squared distance between the predicted cumulative distribution function (CDF) and the empirical CDF of a single observation, $y$. If $y$ is known, it is minimised by a point mass at $y$. CRPS rewards sharp, calibrated predictions. 
 
 ![CRPS as the squared gap between two CDFs](figures/crps-empirical-cdf-gap.png)
+
+## Properties
+
+CRPS is a *proper scoring rule*. If the distribution of $Y$ is known, $Y \sim G$, then the expected value of the CRPS is minimised by $F = G$.
+
+[Proof](proofs/crps-is-proper.md)
