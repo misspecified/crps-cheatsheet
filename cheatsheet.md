@@ -22,3 +22,11 @@ CRPS is the integral of the squared distance between the predicted cumulative di
 CRPS is a *proper scoring rule*. If the distribution of $Y$ is known, $Y \sim G$, then the expected value of the CRPS is minimised by $F = G$.
 
 [Proof](proofs/crps-is-proper.md)
+
+CRPS can be reframed as a difference of expectations. For iid $X, X' \sim F$:
+
+$$
+\mathrm{CRPS}(F, y) = \mathbb{E}|X - y| - \tfrac{1}{2}\mathbb{E}|X - X'|
+$$
+
+[Proof](proofs/crps-alternative-form.md)
