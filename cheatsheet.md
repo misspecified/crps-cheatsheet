@@ -30,3 +30,11 @@ $$
 $$
 
 [Proof](proofs/crps-alternative-form.md)
+
+For $X \sim N(\mu, \sigma^2)$:
+
+$$
+\mathrm{CRPS}(F, y) = \sigma\bigg(z\big(2\Phi(z) - 1\big) + 2\varphi(z) - \frac{1}{\sqrt{\pi}}\bigg)
+$$
+
+[Proof](proofs/gaussian-crps.md)
