@@ -38,3 +38,24 @@ $$
 $$
 
 [Proof](proofs/gaussian-crps.md)
+
+## Estimators
+
+We may wish to estimate CRPS in the case where we do not know $F$, but we can sample from it.
+
+Suppose we sample $x^1, x^2, \dots, x^N$ iid from $F$. The naive "plug-in" estimator for the CRPS of $F$ is:
+
+$$
+\widehat{\mathrm{CRPS}}(x^1, x^2, \dots, x^N, y) = \frac{1}{N} \sum_{n = 1}^{N} |x^n - y| - \frac{1}{2N^2} \sum_{n, n'} |x^n - x^{n'}|
+$$
+
+This is the exact CRPS of the empirical distribution of the sample, $\hat{F}_N$. [Proof](proofs/plugin-is-empirical-crps.md)
+
+This is a biased estimator for the CRPS of the true distribution, $F$, with:
+
+$$
+\mathrm{Bias}(\widehat{\mathrm{CRPS}}) = \frac{1}{2N} \mathbb{E}|X - X'|
+$$
+
+[Proof](proofs/plugin-crps-is-biased.md)
+
