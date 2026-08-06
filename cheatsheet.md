@@ -68,3 +68,21 @@ $$
 $$
 
 This is an unbiased estimator for the CRPS of the true distribution $F$. [Proof](proofs/fcrps-is-unbiased.md)
+
+Suppose we have $M$ independent training examples, with $y_m$ observed for example $m$. For each example, we have a predictive distribution $F_m$ and we can draw independent samples $x_m^{1:N} \sim F_m$.
+
+We can aggregate the fair CRPS estimates over all of these examples:
+
+$$
+\frac{1}{M} \sum_{m = 1}^M \mathrm{fCRPS}(x^{1:N}_m, y_m)
+$$
+
+This is well-behaved for large $M$:
+
+$$
+\mathbb{E}\Big[\Big(\frac{1}{M} \sum_{m = 1}^M \mathrm{fCRPS}(X^{1:N}_m, y_m) - \frac{1}{M} \sum_{m = 1}^M \mathrm{CRPS}(F_m, y_m)\Big)^2\Big] \longrightarrow 0 \qquad (M \to \infty)
+$$
+
+[Proof](proofs/aggregated-fcrps-is-well-behaved.md)
+
+This behaviour justifies using small $N$ (even as small as $N = 2$) if $M$ is large.
