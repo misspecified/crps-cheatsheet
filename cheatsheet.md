@@ -59,3 +59,12 @@ $$
 
 [Proof](proofs/plugin-crps-is-biased.md)
 
+Using the plug-in estimator as a training loss slightly rewards underdispersion, since shrinking the spread reduces $\mathbb{E}|X - X'|$. The smaller the sample, the larger the bias.
+
+An alternative estimator is the fair CRPS ($\mathrm{fCRPS}$):
+
+$$
+\mathrm{fCRPS}(x^1, x^2, \dots, x^N, y) = \frac{1}{N} \sum_{n = 1}^{N} |x^n - y| - \frac{1}{2N(N - 1)} \sum_{n, n'} |x^n - x^{n'}|
+$$
+
+This is an unbiased estimator for the CRPS of the true distribution $F$. [Proof](proofs/fcrps-is-unbiased.md)
