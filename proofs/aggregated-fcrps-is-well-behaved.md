@@ -8,7 +8,7 @@ $$
 Define:
 
 $$
-D_m = \mathrm{CRPS}(F_m, y_m) - \mathrm{fCRPS}(X^{1:N}_m, y_m)
+D_m = \mathrm{fCRPS}(X^{1:N}_m, y_m) - \mathrm{CRPS}(F_m, y_m)
 $$
 
 Then:

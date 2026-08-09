@@ -86,3 +86,11 @@ $$
 [Proof](proofs/aggregated-fcrps-is-well-behaved.md)
 
 This behaviour justifies using small $N$ (even as small as $N = 2$) if $M$ is large.
+
+Aggregated plug-in CRPS does not behave well:
+
+$$
+\mathbb{E}\Big[\Big(\frac{1}{M} \sum_{m = 1}^M \widehat{\mathrm{CRPS}}(X^{1:N}_m, y_m) - \frac{1}{M} \sum_{m = 1}^M \mathrm{CRPS}(F_m, y_m)\Big)^2\Big] \nrightarrow 0 \qquad (M \to \infty)
+$$
+
+[Proof](proofs/aggregated-plugin-crps-is-not-well-behaved.md)
