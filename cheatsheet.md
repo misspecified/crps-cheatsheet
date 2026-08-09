@@ -37,6 +37,8 @@ $$
 \mathrm{CRPS}(F, y) = \sigma\bigg(z\big(2\Phi(z) - 1\big) + 2\varphi(z) - \frac{1}{\sqrt{\pi}}\bigg)
 $$
 
+where $z = \frac{y - \mu}{\sigma}$.
+
 [Proof](proofs/gaussian-crps.md)
 
 ## Estimators
