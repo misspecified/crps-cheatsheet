@@ -96,3 +96,5 @@ $$
 $$
 
 [Proof](proofs/aggregated-plugin-crps-is-not-well-behaved.md)
+
+These results are checked against simulation in the [numerical verification](verification.md).
