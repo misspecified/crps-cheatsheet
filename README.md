@@ -71,6 +71,8 @@ $$
 
 This is an unbiased estimator for the CRPS of the true distribution $F$. [Proof](proofs/fcrps-is-unbiased.md)
 
+This is a fair scoring rule: it incentivises drawing $x^{1:N}$ from the same distribution as $Y$. [Proof](proofs/fcrps-is-fair.md)
+
 Suppose we have $M$ independent training examples, with $y_m$ observed for example $m$. For each example, we have a predictive distribution $F_m$ and we can draw independent samples $x_m^{1:N} \sim F_m$.
 
 We can aggregate the fair CRPS estimates over all of these examples:
